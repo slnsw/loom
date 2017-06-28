@@ -1,0 +1,16 @@
+{
+  "name": "sl-loom",
+  "private": true,
+  "dependencies": {
+    "devicejs": "~0.2.7",
+    "gsap": "~1.16.1",
+    "jquery": "~2.1.1",
+    "jquery-ui": "~1.11.4",
+    "js-signals": "~1.0.0",
+    "localforage": "~1.2.3",
+    "threex.dynamictexture": "*",
+    "underscore": "~1.8.3",
+    "three.js": "0.78.0",
+    "howler.js": "2.0"
+  }
+}

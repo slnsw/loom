@@ -1,0 +1,40 @@
+@mixin transition($transition...) {
+  @include vendor-prefixes(transition, $transition);
+}
+
+@mixin transition-property($property...) {
+  @include vendor-prefixes(transition-property, $property);
+}
+
+@mixin transition-duration($duration...) {
+  @include vendor-prefixes(transition-property, $duration);
+}
+
+@mixin transition-timing-function($timing...) {
+  @include vendor-prefixes(transition-timing-function, $timing);
+}
+
+@mixin transition-delay($delay...) {
+  @include vendor-prefixes(transition-delay, $delay);
+}
+
+@mixin rotate($x) {
+  @include vendor-prefixes(transform, rotate($x));
+}
+
+@mixin translate2d($x, $y) {
+  @include vendor-prefixes(transform, translate($x, $y));
+}
+
+@mixin translate3d($x, $y, $z) {
+  @include vendor-prefixes(transform, translate3d($x, $y, $z));
+}
+
+// Vendor prefixing for shorthand properties
+@mixin vendor-prefixes($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  $property: $value;
+}

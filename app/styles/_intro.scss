@@ -1,0 +1,204 @@
+#intro-page {
+  // background-color: rgba(1, 9, 23, 0);
+  height: 100%;
+  z-index: 900;
+
+  h1 {
+    font-size: .875em;
+    letter-spacing: .1em;
+
+  }
+
+  .bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateZ(1px);
+    width: 100%;
+  }
+
+  .preloader {
+    height: 70px;
+    margin: 20px auto;
+    position: relative;
+    width: 3px;
+
+    .bar {
+      background-color: rgba($white, .4);
+      height: 70px;
+      position: absolute;
+      transform: scaleY(0);
+      width: 1px;
+    }
+
+    .bar-progress {
+      background-color: $light-blue;
+      z-index: 1;
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    width: 350px;
+
+    .logo {
+      height: initial;
+      margin: 0 auto;
+      padding: 30px;
+      width: 180px;
+    }
+
+    .preload-container {
+      height: 370px;
+      left: 50%;
+      position: absolute;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+    }
+
+    .footer {
+      bottom: 0;
+      height: 100px;
+      left: 0;
+      padding-bottom: 30px;
+      position: absolute;
+      width: 100%;
+
+      p {
+        margin: 0 auto;
+        padding-bottom: 10px;
+        width: 190px;
+      }
+
+      img {
+        display: inline-block;
+        height: 45px;
+        margin: 0 4px;
+        padding: 10px;
+        vertical-align: middle;
+        width: auto;
+      }
+
+      #dx-logo {
+        filter: invert(100%);
+        height: 23px;
+        vertical-align: middle;
+      }
+
+      #gs-logo {
+        filter: invert(100%);
+      }
+    }
+
+  }
+
+
+  .messages {
+    background-color: red;
+    display: block;
+    position: relative;
+
+    p {
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+
+  .tooltips {
+    box-sizing: border-box;
+    left: 50%;
+    margin: 0 auto;
+    opacity: 0;
+    padding-top: 22px;
+    position: fixed;
+    top: 0;
+    transform: translateX(-50%);
+
+    .tip-container {
+      // background: red;
+      position: relative;
+      width: 100%;
+    }
+
+    .btn,
+    .tip  {
+      display: inline-block;
+      height: 24px;
+      margin: 0;
+      padding: 5px 20px;
+      vertical-align: middle;
+      width: 24px;
+      // background: green;
+    }
+
+    .tip {
+      box-sizing: border-box;
+      line-height: 1em;
+      margin: 0;
+      opacity: 1;
+      padding: 0;
+      text-align: center;
+      visibility: hidden;
+      width: 64px;
+
+      h1 {
+        text-align: center;
+      }
+    }
+
+    .tip-map {
+      // padding-left: 10px;
+    }
+
+    .background {
+      path {
+        transition: fill 1s ease-in-out;
+        // transition-delay: 1s;
+      }
+    }
+
+    .elements {
+      path,
+      circle {
+        transition: fill 1s ease-in-out;
+        // transition-delay: 1s;
+      }
+    }
+
+    .full {
+      path {
+        transition: fill 1s ease-in-out;
+        // transition-delay: 1s;
+      }
+    }
+
+    .highlight {
+      .background,
+      .full {
+        path {
+          fill: $nav-svg-color;
+          transition: fill 1s ease-in-out;
+          // transition-delay: 1s;
+        }
+      }
+      .elements,
+      .outline {
+        path,
+        circle {
+          fill: transparent;
+          transition: fill 1s ease-in-out;
+          // transition-delay: 1s;
+        }
+      }
+    }
+  }
+}

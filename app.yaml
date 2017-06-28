@@ -1,0 +1,47 @@
+application: sl-loom
+version: 24-1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: dist/favicon.ico
+  upload: favicon\.ico
+
+- url: /images
+  static_dir: dist/images
+
+- url: /data
+  static_dir: dist/data
+
+- url: /scripts/
+  static_dir: dist/scripts
+
+- url: /styles
+  static_dir: dist/styles
+
+- url: /templates
+  static_dir: dist/templates
+
+- url: /
+  static_files: dist/index.html
+  upload: dist/index\.html
+
+skip_files:
+- ^(.*/)?.*/\.tmp/.*$
+- ^(.*/)?.*/bower_components/.*$
+- ^(.*/)?.*/test/.*$
+- ^(.*/)?.*/app/.*$
+- ^(.*/)?.*/node_modules/.*$
+- ^(app/.*)
+- ^(bower_components/.*)
+- ^(test/.*)
+- ^(\.tmp/.*)
+- ^(node_modules/.*)
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.DS_Store$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$

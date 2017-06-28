@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-12 88 24 24" enable-background="new -12 88 24 24" xml:space="preserve">
+<g class="background">
+	<circle fill="#626366" stroke="#626366" cx="0" cy="100" r="11.5"/>
+</g>
+<g class="elements">
+  <circle fill="#FFFFFF" cx="0" cy="95" r="1"/>
+  <line x1="0" y1="98" x2="0" y2="104.5" stroke="#ffffff" stroke-width="1"></line>
+</g>
+</svg>

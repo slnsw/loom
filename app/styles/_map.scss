@@ -1,0 +1,141 @@
+.map-label {
+  background: transparent;
+  border-left: 1px #fff solid;
+  color: #fff;
+  display: block;
+  font-family: Roboto, Tahoma;
+  font-size: 18px;
+  font-weight: 300;
+  height: 37px;
+  letter-spacing: .03em;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 10px 0 23px;
+  position: absolute;
+  text-align: left;
+  text-shadow: 2px 2px 4px #222;
+  visibility: hidden;
+  white-space: nowrap;
+  width: 400px;
+  z-index: 202;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 14px;
+    vertical-align: top;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .date {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+
+  .details {
+    visibility: hidden;
+  }
+
+  .d-status,
+  .d-records,
+  .t-records {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .d-records,
+  .t-records {
+
+    &:hover {
+      background: rgba(255, 255, 255, .3);
+    }
+  }
+
+  .d-status {
+    margin-right: 14px;
+  }
+
+  .link {
+    text-decoration: underline;
+  }
+
+  ul {
+    margin: 14px 0 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 400;
+      margin-right: 26px;
+      vertical-align: top;
+
+      p {
+        letter-spacing: .05em;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .view-records-btn {
+    border-radius: 4px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 24px;
+    padding: 14px;
+
+    &:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+
+    svg {
+      height: 15px;
+      margin-left: 10px;
+      width: 26px;
+    }
+  }
+
+
+  .d-status-bar {
+    @include vendor-prefixes(border-radius, 6px);
+    background: #4d4e56;
+    bottom: 3px;
+    display: inline-block;
+    height: 6px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 78px;
+
+    span {
+      @include vendor-prefixes(transition, width .5s transform .5s);
+      @include vendor-prefixes(border-bottom-left-radius, 6px);
+      @include vendor-prefixes(border-bottom-right-radius, 6px);
+      @include vendor-prefixes(border-top-left-radius, 6px);
+      @include vendor-prefixes(border-top-right-radius, 6px);
+      background-color: rgb(0, 0, 0);
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+}

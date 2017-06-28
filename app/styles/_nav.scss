@@ -1,0 +1,206 @@
+.main-nav {
+  background-color: rgba($navy-blue, .4);
+
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    height: $icon-size;
+    margin-left: 13px;
+    padding: 5px 10px;
+    vertical-align: middle;
+    width: $icon-size;
+
+    path,
+    circles {
+      @include transition(fill .3s ease-out);
+    }
+
+    line {
+      @include transition(stroke .3s ease-out);
+    }
+  }
+}
+
+.top-nav, #intro-page {
+  @include transition(background-color 3s ease-out, color 3s ease-out);
+  height: 81px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &.dark1 {
+    background-color: rgba($navy-blue, .7);
+  }
+
+  .menu {
+    @include translate2d(-50%, 0);
+    left: 50%;
+    position: absolute;
+    top: 21px;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 28px;
+    vertical-align: middle;
+    width: 69px;
+    margin-right: 13px;
+  }
+
+  .tunnel-btn {
+
+    .elements {
+
+      path,
+      circle {
+        fill: $nav-svg-color;
+      }
+    }
+
+    .background {
+
+      path {
+        fill: transparent;
+      }
+    }
+
+    &:hover,
+    &.selected {
+
+      .elements {
+
+        path,
+        circle {
+          fill: transparent;
+        }
+      }
+
+      .background {
+        path {
+          fill: $nav-svg-color;
+        }
+      }
+    }
+  }
+
+  .fav-btn {
+
+    .background {
+
+      circle {
+        fill: $nav-svg-color;
+      }
+    }
+
+    .elements {
+
+      circle,
+      path {
+        fill: transparent;
+      }
+    }
+
+    &:hover,
+    &.selected {
+
+      .background {
+
+        circle {
+          fill: transparent;
+        }
+      }
+
+      .elements {
+
+        circle,
+        path {
+          fill: $nav-svg-color;
+        }
+      }
+    }
+  }
+
+  .map-btn {
+
+    .outline {
+
+      path {
+        fill: $nav-svg-color;
+      }
+    }
+
+    .full {
+
+      path {
+        fill: transparent;
+      }
+    }
+
+    &:hover,
+    &.selected {
+
+      .full {
+
+        path {
+          fill: $nav-svg-color;
+        }
+      }
+    }
+  }
+
+  .space-btn {
+
+    .elements {
+
+      path,
+      circle {
+        fill: $nav-svg-color;
+      }
+    }
+
+    .background {
+
+      path,
+      circle {
+        fill: transparent;
+      }
+    }
+
+    &:hover,
+    &.selected {
+
+      .elements {
+
+        path,
+        circle {
+          fill: transparent;
+        }
+      }
+
+      .background {
+        path,
+        circle {
+          fill: $nav-svg-color;
+        }
+      }
+    }
+  }
+
+  .divider {
+    border-left: 1px solid $nav-svg-color;
+    display: inline-block;
+    height: 42px;
+    margin-left: 15px;
+    opacity: .4;
+    vertical-align: middle;
+    width: 1px;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .top-nav {
+    width: 1024px;
+  }
+}

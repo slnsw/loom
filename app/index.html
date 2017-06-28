@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Loom</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="mobile-page" style="display: none;">
+      <div class="container">
+        <div class="col1">
+          <img class="logo" src="images/ui/landing-loom-logo.svg" alt="">
+          <p>
+            Loom is the first experiment for
+            <br>the DX Lab and it’s a new way to
+            <br>experience some of the data
+            <br>from our collections. 
+          </p>
+        </div>
+        <div class="divider"></div>
+        <div class="col2">
+          <img class="desktop-icon" src="images/ui/desktop-icon.png" />
+          <p>
+            At the moment this experience
+            <br>is optimised for desktop.
+            <br>Stay tuned for the next iteration.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-nav top-nav" style="display: none;">
+      <div class="menu"><img src="images/ui/nav-logo.png" class="logo"/><div class="divider"></div><div class="btn tunnel-btn"></div><div class="btn map-btn"></div><div class="btn space-btn"></div><div class="divider"></div><div class="btn fav-btn"></div></div>
+    </div>
+
+
+    <div class="image-preloader" style="display: none;">
+      <!-- <img src="images/ui/preloader-white.gif" alt=""> -->
+      <div class="circle">
+        <img src="images/ui/circular-preloader.png" alt="" />
+      </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-108603-29', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+
+    <!-- dont change the order of the imports -->
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/devicejs/lib/device.js"></script>
+    <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="/bower_components/js-signals/dist/signals.js"></script>
+    <script src="/bower_components/localforage/dist/localforage.js"></script>
+    <script src="/bower_components/threex.dynamictexture/threex.dynamictexture.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+    <script src="/bower_components/three.js/three.min.js"></script>
+    <script src="/bower_components/howler.js/dist/howler.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/libs/OrbitControls.js"></script>
+    <script src="scripts/libs/Detector.js"></script>
+    <script src="/bower_components/gsap/src/uncompressed/plugins/ColorPropsPlugin.js"></script>
+    <script src="scripts/sl/loom/config.js"></script>
+    <script src="scripts/sl/loom/controllers/app-controller.js"></script>
+    <script src="scripts/sl/loom/models/config-model.js"></script>
+    <script src="scripts/sl/loom/models/app-model.js"></script>
+    <script src="scripts/sl/loom/services/app-service.js"></script>
+    <script src="scripts/sl/loom/services/favorites-service.js"></script>
+    <script src="scripts/sl/loom/services/ga-service.js"></script>
+    <script src="scripts/sl/loom/services/template-service.js"></script>
+    <script src="scripts/sl/loom/services/initial-assets-service.js"></script>
+    <script src="scripts/sl/loom/utils/array-utils.js"></script>
+    <script src="scripts/sl/loom/utils/canvas-utils.js"></script>
+    <script src="scripts/sl/loom/utils/color-utils.js"></script>
+    <script src="scripts/sl/loom/utils/svg-utils.js"></script>
+    <script src="scripts/sl/loom/utils/tags-utils.js"></script>
+    <script src="scripts/sl/loom/utils/text-utils.js"></script>
+    <script src="scripts/sl/loom/views/app-view.js"></script>
+    <script src="scripts/sl/loom/views/favorites-view.js"></script>
+    <script src="scripts/sl/loom/views/item-details.js"></script>
+    <script src="scripts/sl/loom/views/item-view.js"></script>
+    <script src="scripts/sl/loom/views/intro-view.js"></script>
+    <script src="scripts/sl/loom/views/main-nav-view.js"></script>
+    <script src="scripts/sl/loom/views/sidebar-view.js"></script>
+    <script src="scripts/sl/loom/views/tags-view.js"></script>
+    <script src="scripts/sl/loom/views/tunnel-view.js"></script>
+    <script src="scripts/sl/loom/views/webgl-view.js"></script>
+    <script src="scripts/sl/loom/views/slider-year.js"></script>
+    <script src="scripts/sl/loom/views/map-view.js"></script>
+    <script src="scripts/sl/loom/views/map/map-3d.js"></script>
+    <script src="scripts/sl/loom/views/common/records-gallery.js"></script>
+    <script src="scripts/sl/loom/views/map/map-area-label.js"></script>
+    <script src="scripts/sl/loom/views/map/map-area.js"></script>
+    <script src="scripts/sl/loom/views/map/map-shader.js"></script>
+    <script src="scripts/sl/loom/services/topics-service.js"></script>
+    <script src="scripts/sl/loom/services/trove-service.js"></script>
+    <script src="scripts/sl/loom/utils/object-rotate-controls.js"></script>
+    <script src="scripts/sl/loom/views/space/particles/particle-label.js"></script>
+    <script src="scripts/sl/loom/views/space/particles/areas-menu.js"></script>
+    <script src="scripts/sl/loom/views/space/particles/menu.js"></script>
+    <script src="scripts/sl/loom/views/space/particles/top-topics-menu.js"></script>
+    <script src="scripts/sl/loom/views/space/particles/particle-sprite.js"></script>
+    <script src="scripts/sl/loom/views/space/particles/particles-view.js"></script>
+    <script src="scripts/sl/loom/views/space/details/details-view.js"></script>
+    <script src="scripts/sl/loom/views/space/details/details-html.js"></script>
+    <script src="scripts/sl/loom/views/space/details/details-trove-html.js"></script>
+    <script src="scripts/sl/loom/views/space/details/details-gallery-html.js"></script>
+    <script src="scripts/sl/loom/views/space/details/details-locations-html.js"></script>
+    <script src="scripts/sl/loom/views/space/space-view.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
